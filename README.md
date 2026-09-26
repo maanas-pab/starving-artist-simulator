@@ -13,7 +13,7 @@ colorful and gallery-worthy when you make it.
 
 ## Play it
 
-**Option A — Web (no setup):** open `web/index.html` in a browser.
+**🎮 Play live:** https://maanas-pab.github.io/starving-artist-simulator/
 
 **Option B — Python (terminal):**
 
@@ -62,7 +62,7 @@ python3 -m unittest discover tests -v
 ```
 simulator.py        # terminal game (pure Python, no deps)
 demo.py             # autoplay demo (mixed strategy, prints final apartment)
-web/
+docs/               # GitHub Pages site (playable in browser)
   index.html        # game UI
   styles.css        # apartment + stats styling
   app.js            # game logic + canvas apartment renderer
