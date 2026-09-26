@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starving Artist Simulator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game">
+    <header class="hero">
+      <h1>🎨 Starving Artist Simulator</h1>
+      <p class="tagline">Pay rent. Buy paint. Sell out or starve for your art.</p>
+      <p class="month" id="monthLabel">Month 1 / 12</p>
+    </header>
+
+    <section class="board">
+      <div class="apartment-wrap">
+        <canvas id="apartment" width="520" height="340"></canvas>
+        <p class="mood" id="moodLabel">A cold, empty room…</p>
+      </div>
+
+      <div class="panel">
+        <h2>Stats</h2>
+        <div class="stat"><span>💰 Money</span><strong id="money">$1200</strong></div>
+        <div class="bar"><div class="fill money" id="moneyBar"></div></div>
+
+        <div class="stat"><span>🎨 Paint</span><strong id="paint">x3</strong></div>
+        <div class="bar"><div class="fill paint" id="paintBar"></div></div>
+
+        <div class="stat"><span>😊 Morale</span><strong id="morale">70</strong></div>
+        <div class="bar"><div class="fill morale" id="moraleBar"></div></div>
+
+        <div class="stat"><span>⭐ Prestige</span><strong id="prestige">0</strong></div>
+        <div class="bar"><div class="fill prestige" id="prestigeBar"></div></div>
+
+        <div class="stat"><span>📣 Reputation</span><strong id="rep">0</strong></div>
+        <div class="bar"><div class="fill rep" id="repBar"></div></div>
+
+        <div class="buttons">
+          <button id="btnCommercial" title="Safe cash, low prestige">🖼️ Commercial art</button>
+          <button id="btnFine" title="45% sale chance, high prestige">🌟 Fine art</button>
+          <button id="btnRest" title="Recover morale, save paint">😴 Rest</button>
+        </div>
+        <button id="btnRestart" class="restart hidden">↻ Start over</button>
+      </div>
+    </section>
+
+    <section class="log-wrap">
+      <h2>Journal</h2>
+      <ul id="log"></ul>
+    </section>
+
+    <footer>
+      <p>Rent $800/mo · Paint $50/mo · Survive 12 months with prestige ≥ 60 or $5000.</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
