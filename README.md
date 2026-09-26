@@ -18,7 +18,8 @@ colorful and gallery-worthy when you make it.
 **Option B — Python (terminal):**
 
 ```bash
-python3 simulator.py
+python3 simulator.py      # play
+python3 demo.py           # watch autoplay win
 ```
 
 ## Rules
@@ -60,6 +61,7 @@ python3 -m unittest discover tests -v
 
 ```
 simulator.py        # terminal game (pure Python, no deps)
+demo.py             # autoplay demo (mixed strategy, prints final apartment)
 web/
   index.html        # game UI
   styles.css        # apartment + stats styling
