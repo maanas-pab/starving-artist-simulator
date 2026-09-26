@@ -21,8 +21,8 @@ START_PAINT = 3
 START_MORALE = 70
 WIN_MONTHS = 12
 
-COMMERCIAL_PRICE = (120, 250)
-FINE_PRICE = (400, 900)
+COMMERCIAL_PRICE = (700, 1100)
+FINE_PRICE = (1500, 3000)
 FINE_SALE_CHANCE = 0.45
 
 
@@ -140,9 +140,9 @@ def maybe_event(state: ArtistState) -> None:
     if roll > 0.35:
         return
     events = [
-        ("mural", "A café paid you $150 for a chalk mural!", 150, 0, 0),
+        ("mural", "A café paid you $350 for a chalk mural!", 350, 0, 0),
         ("review", "A blog reviewed you! +4 prestige.", 0, 6, 4),
-        ("leak", "Roof leak! Repairs cost $120.", -120, -4, 0),
+        ("leak", "Roof leak! Repairs cost $200.", -200, -4, 0),
         ("friend", "A friend brings groceries. Morale +8.", 0, 8, 0),
     ]
     key, msg, money, morale, prestige = state.rng.choice(events)

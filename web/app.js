@@ -61,9 +61,9 @@ function payBills() {
 function maybeEvent() {
   if (Math.random() > 0.35) return;
   const events = [
-    () => { S.money += 150; log("✨ Event: a café paid $150 for a chalk mural!"); },
+    () => { S.money += 350; log("✨ Event: a café paid $350 for a chalk mural!"); },
     () => { S.prestige += 4; S.reputation += 6; log("✨ Event: a blog reviewed you! +4 prestige."); },
-    () => { S.money -= 120; S.morale -= 4; log("✨ Event: roof leak! Repairs −$120."); },
+    () => { S.money -= 200; S.morale -= 4; log("✨ Event: roof leak! Repairs −$200."); },
     () => { S.morale = Math.min(100, S.morale + 8); log("✨ Event: a friend brings groceries. Morale +8."); },
   ];
   events[rand(0, events.length - 1)]();
@@ -103,7 +103,7 @@ function doCommercial() {
     log("No paint! Blank canvas stares back. Morale −10.");
   } else {
     S.paint -= 1;
-    const earned = rand(120, 250);
+    const earned = rand(700, 1100);
     S.money += earned;
     S.paintings += 1;
     S.prestige += 2;
@@ -128,7 +128,7 @@ function doFine() {
     S.paintings += 1;
     S.prestige += 8;
     if (Math.random() < 0.45) {
-      const earned = rand(400, 900);
+      const earned = rand(1500, 3000);
       S.money += earned;
       S.reputation += 5;
       S.morale = Math.min(100, S.morale + 10);
